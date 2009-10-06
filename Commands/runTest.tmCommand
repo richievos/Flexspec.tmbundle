@@ -12,7 +12,7 @@ file = File.basename(file, '.as')
 file = File.basename(file, '.mxml')
 method = ENV['method']
 
-swf_name = ENV['TEST_SWF']
+swf_name = ENV['TEST_SWF'] || "TestRunner.swf"
 
 port = 3078
 
