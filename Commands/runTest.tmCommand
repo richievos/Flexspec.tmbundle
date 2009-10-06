@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby
+file = ARGV[0] || ENV['file'] || ENV['TM_FILEPATH'] || ''
+# trim off the extension, only look at common ones
+file = File.basename(file, '.as')
+file = File.basename(file, '.mxml')
+method = ENV['method']
+
+port = 3078
+
+url = "http://localhost:#{port}/ENV['TEST_SWF'].swf?testPattern=#{file}"
+
+if !system("ps ax | grep \"[t]est_server -p #{port}\"")
+	command = "ruby script/test_server -p #{port} &gt; /dev/null 2&gt;&amp;1 &amp;"
+	puts "Trying to start the test server in #{File.expand_path(Dir.pwd)}.\nIf this doesn't work start it manually with"
+	puts "\tcd #{File.expand_path(Dir.pwd)}"
+	puts "\t#{command}"
+	system(command)
+	sleep(3)
+end
+
+if PLATFORM =~ /darwin/
+  system("open #{url}")
+else
+  system("firefox #{url}")
+end</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>@r</string>
+	<key>name</key>
+	<string>Run Current Test File</string>
+	<key>output</key>
+	<string>discard</string>
+	<key>scope</key>
+	<string>source.actionscript.3</string>
+	<key>uuid</key>
+	<string>289F3B04-209E-412C-9887-08D2D4D36A78</string>
+</dict>
+</plist>

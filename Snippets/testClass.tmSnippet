@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>package  {
+	import com.blchq.unit.TestCaseExt;
+
+	public class $1Test extends TestCaseExt {
+		public override function defineTests():void {
+			describe("$2", function():* {
+				it("$3", function():* {
+					$0
+				})
+			})
+		}
+	}
+}</string>
+	<key>name</key>
+	<string>testClass</string>
+	<key>scope</key>
+	<string>source.actionscript.3</string>
+	<key>tabTrigger</key>
+	<string>testclass</string>
+	<key>uuid</key>
+	<string>4CE89E08-1A14-484A-8480-15F7504EDF79</string>
+</dict>
+</plist>

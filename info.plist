@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Flexspec</string>
+	<key>ordering</key>
+	<array>
+		<string>239E740E-7B16-4DA8-867D-83AAA7FC783B</string>
+		<string>45B70601-8233-4FB9-842D-C9839BCB2BFA</string>
+		<string>289F3B04-209E-412C-9887-08D2D4D36A78</string>
+		<string>4CE89E08-1A14-484A-8480-15F7504EDF79</string>
+	</array>
+	<key>uuid</key>
+	<string>56387A62-CE23-4161-A21C-CD8ED2DCC9B7</string>
+</dict>
+</plist>
