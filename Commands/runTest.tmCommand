@@ -17,7 +17,7 @@ swf_name = ENV['TEST_SWF'] || "TestRunner.swf"
 port = 3078
 
 server_dir = File.expand_path(Dir.pwd)
-url = "http://localhost:#{port}/#{swf_name}.swf?testPattern=#{file}"
+url = "http://localhost:#{port}/#{swf_name}?testPattern=#{file}"
 
 if !system("ps ax | grep \"[t]est_server -p #{port}\"")
 	command = "ruby script/test_server -p #{port} &gt; /dev/null 2&gt;&amp;1 &amp;"
